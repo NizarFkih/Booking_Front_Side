@@ -1,0 +1,14 @@
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+body {
+  box-sizing: border-box;
+  color: #777;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+html {
+  font-size: 62.5%;
+}
