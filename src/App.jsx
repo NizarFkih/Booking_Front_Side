@@ -1,10 +1,12 @@
 import NavBar from "./components/NavBar.component";
-
+import SideBar from "./components/SideBar.component";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div>
+    <Router>
       <NavBar />
-    </div>
+      <SideBar />
+    </Router>
   );
 }
 

@@ -6,7 +6,7 @@ import { RiMessage2Fill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
 import NotificationPanel from "./NotificationPanel.component";
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState("");
@@ -21,49 +21,49 @@ const NavBar = () => {
   };
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.header__logoBox}>
+      <NavLink href="/" className={styles.header__logoBox}>
         <img src={logo} alt="logo" className={styles.header__logo} />
-      </a>
+      </NavLink>
 
-      <div className={styles.header__searchBox}>
+      <div className={styles.header__search}>
         <input
           type="search"
           name="searchBar"
           id=""
           placeholder="Search hotels"
-          className={styles.header__searchBar}
+          className={styles.header__searchInput}
         />
-        <IoSearch className={styles.header__searchBox__searchIcon} />
+        <IoSearch className={styles.header__searchIcon} />
       </div>
 
-      <nav className={styles.userNav}>
+      <nav className={styles.header__nav}>
         {isOpen ? <NotificationPanel title={title} /> : ""}
         <div
-          className={`${styles.userNav__iconBox} ${
-            title == "Notifications" ? styles.userNav__iconBox___onFocus : ""
+          className={`${styles.header__navItem} ${
+            title == "Notifications" ? styles.header__navItem___onFocus : ""
           }`}
           onClick={() => panelHandler("Notifications")}
         >
           <IoMdNotifications />
-          <span className={styles.userNav__notification}>3</span>
+          <span className={styles.header__navItem___counter}>3</span>
         </div>
         <div
-          className={`${styles.userNav__iconBox} ${
-            title == "Messages" ? styles.userNav__iconBox___onFocus : ""
+          className={`${styles.header__navItem} ${
+            title == "Messages" ? styles.header__navItem___onFocus : ""
           }`}
           onClick={() => panelHandler("Messages")}
         >
           <RiMessage2Fill />
-          <span className={styles.userNav__message}>2</span>
+          <span className={styles.header__navItem___counter}>2</span>
         </div>
         <div
-          className={`${styles.userNav__iconBox} ${
-            title == "Control Panel" ? styles.userNav__iconBox___onFocus : ""
+          className={`${styles.header__navItem} ${
+            title == "Control Panel" ? styles.header__navItem___onFocus : ""
           }`}
           onClick={() => panelHandler("Control Panel")}
         >
-          <img src={user} alt="" className={styles.userPicture} />
-          <span className={styles.userNav__userName}>Nizar</span>
+          <img src={user} alt="" className={styles.header__navAvatar} />
+          <span className={styles.header__navUsername}>Nizar</span>
         </div>
       </nav>
     </header>

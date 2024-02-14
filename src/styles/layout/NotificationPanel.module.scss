@@ -6,14 +6,15 @@
   position: absolute;
   top: 100%;
   right: -2rem;
-  border: 0.1rem solid $color-grey-light-4;
+  border: $line;
   border-radius: 1.5rem;
   background-color: white;
-  & .panelBox__title {
+  box-shadow:$shadow-extra-light ;
+  &__title {
     font-size: 1.8rem;
     font-weight: 700;
     padding-bottom: 0.5rem;
-    border-bottom: 0.1rem solid $color-grey-light-4;
+    border-bottom: $line;
     margin-bottom: 0.8rem;
   }
 }
