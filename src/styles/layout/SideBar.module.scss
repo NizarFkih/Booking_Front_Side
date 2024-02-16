@@ -1,12 +1,7 @@
 @import "./../base/color.scss";
 .sideNav {
-  height: calc(100vh - 6rem);
-  width: 4.4%;
-  position: fixed;
+  flex: 0 0 4.4%;
   overflow-x: hidden;
-  top: 6rem;
-  left: 0rem;
-  z-index: 5;
   background-color: $color-grey-dark-1;
   color: $color-grey-light-1;
   display: flex;
@@ -15,7 +10,7 @@
   padding: 2rem 0.5rem 0.5rem 0.5rem;
   transition: 0.5s;
   &:hover {
-    width: 18%;
+    flex:0 0 18%;
   }
   &__link {
     overflow-x: hidden;

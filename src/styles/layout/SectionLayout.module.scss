@@ -1,0 +1,6 @@
+@import "./../base/color.scss";
+.container {
+  background-color: $color-grey-light-1;
+  flex: 1 0 0;
+  overflow-y: scroll;
+}

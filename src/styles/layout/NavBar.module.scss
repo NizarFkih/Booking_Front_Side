@@ -8,6 +8,7 @@
   position: fixed;
   width: 100vw;
   border-bottom: $line;
+  z-index: 5;
   &__logoBox {
     width: 3rem;
     height: 3.25rem;
