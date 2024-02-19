@@ -1,10 +1,10 @@
 import styles from "./../styles/layout/NavBar.module.scss";
 import logo from "./../assets/logo.png";
-import user from "./../assets/user.jpg";
 import { IoMdNotifications } from "react-icons/io";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
-import NotificationPanel from "./NotificationPanel.component";
+import NotificationPanel from "./common/NotificationPanel.component";
+import UserProfileAvatar from "./common/UserProfileAvatar.component";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 const NavBar = () => {
@@ -21,7 +21,7 @@ const NavBar = () => {
   };
   return (
     <header className={styles.header}>
-      <NavLink href="/" className={styles.header__logoBox}>
+      <NavLink to="/" className={styles.header__logoBox}>
         <img src={logo} alt="logo" className={styles.header__logo} />
       </NavLink>
 
@@ -33,7 +33,9 @@ const NavBar = () => {
           placeholder="Search hotels"
           className={styles.header__searchInput}
         />
-        <IoSearch className={styles.header__searchIcon} />
+        <button className={styles.btn}>
+          <IoSearch  />
+        </button>
       </div>
 
       <nav className={styles.header__nav}>
@@ -62,7 +64,7 @@ const NavBar = () => {
           }`}
           onClick={() => panelHandler("Control Panel")}
         >
-          <img src={user} alt="" className={styles.header__navAvatar} />
+          <UserProfileAvatar />
           <span className={styles.header__navUsername}>Nizar</span>
         </div>
       </nav>

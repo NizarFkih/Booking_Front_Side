@@ -10,22 +10,22 @@
   border-bottom: $line;
   z-index: 5;
   &__logoBox {
-    width: 3rem;
+    width: 4.7rem;
     height: 3.25rem;
     & .header__logo {
-      height: 3.25rem;
+      height: inherit;
+      width: 100%;
+      max-width: 100%;
     }
   }
   &__search {
     flex: 0 0 40%;
-    font-size: inherit;
-    font-family: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 
     &Input {
+      color: inherit;
       outline: none;
       border-radius: 10rem;
       border: none;
@@ -33,7 +33,6 @@
       width: 80%;
       height: 3rem;
       padding: 0.7rem 2rem;
-      color: inherit;
       transition: all 0.2s;
       &:focus {
         width: 90%;
@@ -42,11 +41,22 @@
         letter-spacing: 0.1rem;
       }
     }
-    &Icon {
-      font-size: 2rem;
+    & .btn {
       color: inherit;
+      width: 3rem;
+      font-size: 2rem;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
       position: relative;
-      left: -3rem;
+      left: -3.5rem;
+      cursor: pointer;
+      &:active {
+        font-size: 1.8rem;
+        color: $color-primary;
+      }
     }
   }
 
@@ -59,7 +69,7 @@
 
     &Item {
       cursor: pointer;
-      height: 100%;
+      height: inherit;
       padding: 0rem 1.5rem;
       font-size: 2.5rem;
       color: $color-grey-dark-2;
@@ -103,15 +113,9 @@
         color: white;
       }
     }
-    &Avatar {
-      display: block;
-      width: 3.75rem;
-      height: 3.75rem;
-      border-radius: 50%;
-      margin-right: 1rem;
-    }
     &Username {
       font-size: 1.6rem;
+      margin-left: 0.5rem;
     }
   }
 }
