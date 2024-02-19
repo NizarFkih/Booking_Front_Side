@@ -1,0 +1,17 @@
+.avatar {
+  height: 3.75rem;
+  width: 3.75rem;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    z-index: 3;
+  }
+
+  &__img {
+    max-width: 100%;
+    width: 100%;
+    height: inherit;
+  }
+}
