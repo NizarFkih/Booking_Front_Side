@@ -1,0 +1,15 @@
+@import "./../../../styles/base/color";
+.ratingStars {
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 1.9rem;
+    height: 1.9rem;
+    &:hover {
+      color: $color-primary-light ;
+      transform: scale(1.2);
+    }
+  }
+}
