@@ -4,11 +4,14 @@
   flex-direction: column;
   background-color: #fff;
   padding: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.8rem;
   border-top-left-radius: 2rem;
   box-shadow: $shadow-light-bottom;
   position: relative;
   z-index: 1;
+  &:last-child{
+    margin-bottom: 0;
+  }
   &::before {
     content: "\201C";
     font-family: sans-serif;

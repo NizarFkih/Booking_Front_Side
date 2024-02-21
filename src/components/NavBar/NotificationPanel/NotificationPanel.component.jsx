@@ -1,4 +1,4 @@
-import styles from "./../styles/layout/NotificationPanel.module.scss";
+import styles from "./NotificationPanel.module.scss";
 const NotificationPanel = ({ title, children }) => {
   return (
     <div className={styles.panelBox}>

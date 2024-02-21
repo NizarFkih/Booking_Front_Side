@@ -1,5 +1,5 @@
-import UserProfileAvatar from "./UserProfileAvatar.component";
-import styles from "./styles/Feedback.module.scss";
+import UserProfileAvatar from "../UserProfileAvatar/UserProfileAvatar.component";
+import styles from "./Feedback.module.scss";
 
 const Feedback = ({ data }) => {
   return (

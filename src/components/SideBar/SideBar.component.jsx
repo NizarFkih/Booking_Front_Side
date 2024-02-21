@@ -1,4 +1,4 @@
-import styles from "./../styles/layout/SideBar.module.scss";
+import styles from "./SideBar.module.scss";
 import { MdHomeFilled, MdFlight, MdDirectionsCar } from "react-icons/md";
 import { FaMapSigns } from "react-icons/fa";
 import { NavLink } from "react-router-dom";

@@ -1,5 +1,5 @@
-import styles from "./styles/UserProfileAvatar.module.scss";
-import avatar from "./../../assets/avatar.png";
+import styles from "./UserProfileAvatar.module.scss";
+import avatar from "./../../../assets/avatar.png";
 const UserProfileAvatar = ({ img, customStyle = {} }) => {
   return (
     <div className={styles.avatar} style={{ ...customStyle }}>

@@ -1,5 +1,5 @@
-import MainLayout from "./components/MainLayout.component";
-import NavBar from "./components/NavBar.component";
+import MainLayout from "./components/Layout/MainLayout/MainLayout.component";
+import NavBar from "./components/NavBar/NavBar.component";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {

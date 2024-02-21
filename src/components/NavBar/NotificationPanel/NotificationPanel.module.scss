@@ -1,4 +1,4 @@
-@import "./../base/color.scss";
+@import "./../../../styles/base/color";
 .panelBox {
   width: 33rem;
   height: 14rem;
@@ -9,7 +9,7 @@
   border: $line;
   border-radius: 1.5rem;
   background-color: white;
-  box-shadow:$shadow-extra-light ;
+  box-shadow: $shadow-extra-light;
   &__title {
     font-size: 1.8rem;
     font-weight: 700;

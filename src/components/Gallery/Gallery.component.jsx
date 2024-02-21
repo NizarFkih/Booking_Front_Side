@@ -21,7 +21,9 @@ const Gallery = ({ pictures = [] }) => {
     <div className={styles.gallery}>
       <span
         className={`${styles.gallery__action} ${styles.gallery__action___previous}`}
-        onClick={()=>{handleGallery('-')}}
+        onClick={() => {
+          handleGallery("-");
+        }}
       >
         <GrPrevious />
       </span>
@@ -32,8 +34,10 @@ const Gallery = ({ pictures = [] }) => {
         : ""}
 
       <span
-        className={`${styles.gallery__action} ${styles.gallery__action___next}`} 
-        onClick={()=>{handleGallery('+')}}
+        className={`${styles.gallery__action} ${styles.gallery__action___next}`}
+        onClick={() => {
+          handleGallery("+");
+        }}
       >
         <GrNext />
       </span>

@@ -1,10 +1,10 @@
-import styles from "./../styles/layout/NavBar.module.scss";
-import logo from "./../assets/logo.png";
+import styles from "./NavBar.module.scss";
+import logo from "./../../assets/logo.png";
 import { IoMdNotifications } from "react-icons/io";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoSearch } from "react-icons/io5";
-import NotificationPanel from "./common/NotificationPanel.component";
-import UserProfileAvatar from "./common/UserProfileAvatar.component";
+import NotificationPanel from "./NotificationPanel/NotificationPanel.component";
+import UserProfileAvatar from "../common/UserProfileAvatar/UserProfileAvatar.component";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 const NavBar = () => {
@@ -34,7 +34,7 @@ const NavBar = () => {
           className={styles.header__searchInput}
         />
         <button className={styles.btn}>
-          <IoSearch  />
+          <IoSearch />
         </button>
       </div>
 

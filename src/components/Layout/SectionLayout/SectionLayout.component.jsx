@@ -1,4 +1,5 @@
-import styles from "./../styles/layout/SectionLayout.module.scss";
+import styles from "./SectionLayout.module.scss";
+
 const SectionLayout = ({ children }) => {
   return <section className={styles.container}>{children}</section>;
 };
