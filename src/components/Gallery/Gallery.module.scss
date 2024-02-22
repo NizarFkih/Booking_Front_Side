@@ -3,6 +3,7 @@
   display: flex;
   position: relative;
   height: 28rem;
+  user-select: none;
 
   &__img {
     width: 100%;

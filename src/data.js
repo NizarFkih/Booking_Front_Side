@@ -2,6 +2,7 @@ import img1 from "./assets/hotel-1.jpg";
 import img2 from "./assets/hotel-2.jpg";
 import img3 from "./assets/hotel-3.jpg";
 import img4 from "./assets/hotel-4.jpg";
+import img5 from "./assets/hotel-5.jpg";
 
 import user1 from "./assets/user-1.jpg";
 import user2 from "./assets/user-3.jpg";
@@ -41,11 +42,11 @@ const feedbacks = [
 ];
 
 const hotel = {
-  name:'hotel las palms',
-  stars:3,
-  rate:8.6,
-  votes:486,
-  location:'Albuf, Portugal',
+  name: "hotel las palms",
+  stars: 3,
+  rate: 8.6,
+  votes: 486,
+  location: "Albuf, Portugal",
   descriptions: [
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.",
     "Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.",
@@ -62,7 +63,7 @@ const hotel = {
   ],
   recommendedBy: [user1, user2, user3, user4],
   feedbacks,
-  pictures: [img1, img2, img3, img4],
+  pictures: [img1, img2, img3,img5, img4],
 };
 export const galleryData = () => {
   return [img1, img2, img3, img4];
@@ -71,6 +72,6 @@ export const feedbacksData = () => {
   return feedbacks;
 };
 
-export const hotelData=()=>{
-  return hotel
-}
+export const hotelData = () => {
+  return hotel;
+};
