@@ -1,0 +1,36 @@
+@import "./../../styles/base/color";
+.notFoundSection {
+  text-align: center;
+  font-size: 7rem;
+  height: 100%;
+
+  &__heading {
+    margin-top: 4rem;
+  }
+  &__flipIcon {
+    animation: flip 3s ease-in infinite alternate;
+    position: relative;
+    margin: 0 2rem;
+    top: 0.5rem;
+ 
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-45deg);
+    color:$color-primary;
+  }
+  60% {
+    transform: rotate(45deg);
+    color:$color-primary;
+  }
+  100% {
+    transform: rotate(0);
+    
+  }
+ 
+}
