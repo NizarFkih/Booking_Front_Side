@@ -7,11 +7,11 @@ const HeadBar = ({ data }) => {
     <header className={styles.overview}>
       <div className={styles.overview__info}>
         <h1 className={styles.overview__heading}>
-          {data?.title ? data.title : "hotel las palms"}
+          {data?.name ? data.name : "hotel las palms"}
         </h1>
 
         <div className={styles.overview__class}>
-          <RatingStars />
+          <RatingStars stars={data?.stars ? data.stars : 0} />
         </div>
       </div>
       <div className={styles.overview__info}>

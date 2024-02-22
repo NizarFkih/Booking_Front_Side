@@ -1,0 +1,73 @@
+@import "./../styles/base/color";
+.container {
+  display: flex;
+  padding: 4.5rem;
+  gap: 4.5rem;
+  font-size: 1.4rem;
+  &__mainSection {
+    height: fit-content;
+    background-color: #fff;
+    flex: 0 0 60%;
+    font-size: inherit;
+    padding: 3rem;
+    box-shadow: $shadow-light;
+    & .description {
+      margin-bottom: 2rem;
+    }
+    & .list {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: $line;
+      border-bottom: $line;
+      margin: 3rem 0;
+      padding: 3rem 0;
+      &__item {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+      }
+      &__icon {
+        color: $color-primary;
+        font-size: 1rem;
+      }
+    }
+    & .recommend {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__text {
+        font-size: 1.3rem;
+        color: $color-grey-dark-3;
+      }
+      &__list {
+        display: flex;
+      }
+    }
+  }
+  & .sideSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &__feedbacks {
+      max-height: 36.5rem;
+      height: 36.5rem;
+
+      flex: 25%;
+
+      &___displayMore {
+        outline: none;
+        border: none;
+        color: $color-primary;
+        background-color: transparent;
+        padding: 0 0 0.2rem 0;
+        border-bottom: 0.1rem solid $color-primary;
+        font-weight: 600;
+        &:hover span {
+          transition: all 0.5s;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
