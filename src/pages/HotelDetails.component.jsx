@@ -28,13 +28,15 @@ const HotelDetails = () => {
       />
       <div className={styles.container}>
         <div className={styles.container__mainSection}>
-          {data.descriptions.map((desc) => (
-            <p className={styles.description}>{desc}</p>
+          {data.descriptions.map((desc, index) => (
+            <p className={styles.description} key={index}>
+              {desc}
+            </p>
           ))}
 
           <ul className={styles.list}>
-            {data.services.map((service) => (
-              <li className={styles.list__item}>
+            {data.services.map((service, index) => (
+              <li className={styles.list__item} key={index}>
                 <GrNext className={styles.list__icon} />
                 {service}
               </li>
