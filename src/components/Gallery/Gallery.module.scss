@@ -1,13 +1,14 @@
 @import "./../../styles/base/color";
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
   position: relative;
   height: 28rem;
   user-select: none;
-
   &__img {
     width: 100%;
-    height: auto;
+    height: inherit;
   }
   &__action {
     display: flex;
