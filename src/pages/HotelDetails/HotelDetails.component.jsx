@@ -1,12 +1,12 @@
-import OverviewBar from "../components/OverviewBar/OverviewBar.component.jsx";
-import SectionLayout from "../components/Layout/SectionLayout/SectionLayout.component.jsx";
-import Gallery from "./../components/Gallery/Gallery.component";
+import OverviewBar from "../../components/OverviewBar/OverviewBar.component.jsx";
+import SectionLayout from "../../components/Layout/SectionLayout/SectionLayout.component.jsx";
+import Gallery from "../../components/Gallery/Gallery.component.jsx";
 import styles from "./HotelDetails.module.scss";
-import { hotelData } from "./../data.js";
-import Feedback from "./../components/common/Feedback/Feedback.component.jsx";
+import { hotelData } from "../../data.js";
+import Feedback from "../../components/common/Feedback/Feedback.component.jsx";
 import { GrNext } from "react-icons/gr";
 
-import UserProfileAvatar from "../components/common/UserProfileAvatar/UserProfileAvatar.component.jsx";
+import UserProfileAvatar from "../../components/common/UserProfileAvatar/UserProfileAvatar.component.jsx";
 import { useState } from "react";
 const HotelDetails = () => {
   const data = hotelData();
@@ -78,6 +78,13 @@ const HotelDetails = () => {
             {showMore ? "Show Less" : "Show More"} <span>&rarr;</span>{" "}
           </button>
         </div>
+      </div>
+      <div className={styles.cta__box}>
+        <h2>good news! we have 4 free rooms for your selected dates!</h2>
+        <button className={styles.btn}>
+          <span className={styles.btn__visible}>book now</span>
+          <span className={styles.btn__hidden}>only 4 room left</span>
+        </button>
       </div>
     </SectionLayout>
   );
