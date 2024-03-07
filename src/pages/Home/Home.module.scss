@@ -1,0 +1,93 @@
+@import "./../../styles/base/color";
+
+.container {
+    background-image: url(./../../assets/shape10.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    &__mainContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+
+        & .text {
+            &__primary {
+                font-size: 5rem;
+                line-height: 0.9;
+
+                & span {
+                    display: inline-block;
+
+                    &::first-letter {
+                        color: $color-primary;
+                    }
+                }
+            }
+
+            &__secondary {
+                margin-top: 1rem;
+                font-size: 1.7rem;
+            }
+        }
+
+        & .actions {
+            display: flex;
+            justify-content: space-between;
+            width: 27rem;
+            margin-top: 1.2rem;
+
+            & .btn {
+                cursor: pointer;
+                text-transform: capitalize;
+                display: inline-block;
+                height: 4.2rem;
+                padding: 0.6rem 3.5rem;
+                font-size: 1.8rem;
+                color: #333;
+                border-radius: 0.7rem;
+                border: none;
+                border: 1px solid transparent;
+
+                &:hover {
+                    border: 1px solid $color-primary-light;
+                }
+
+                &___register {
+                    background-color: $color-grey-light-3;
+                    color: $color-grey-dark-2;
+
+
+                }
+
+                &___login {
+
+                    background-color: $color-primary-light;
+                    color: $color-grey-light-1;
+
+                    &:hover {
+
+                        background-color: $color-grey-light-1;
+                        color: $color-primary-light;
+                    }
+                }
+            }
+        }
+    }
+
+    &__image {
+        flex: 0 0 66%;
+
+        & .img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
