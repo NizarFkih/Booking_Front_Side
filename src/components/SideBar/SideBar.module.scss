@@ -1,4 +1,5 @@
 @import "./../../styles/base/color.scss";
+
 .sideNav {
   flex: 0 0 4.4%;
   overflow-x: hidden;
@@ -7,25 +8,70 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem 0.5rem 0.5rem 0.5rem;
-  transition: 0.5s;
+  align-items: center;
+  transition: 0.2s;
+
   &:hover {
-    flex:0 0 18%;
+    flex: 0 0 18%;
+    transition: 0.5s;
   }
-  &__link {
-    overflow-x: hidden;
+
+  &:hover .link {
+    justify-content: start;
+  }
+
+  &:hover .link .link__text {
+    display: block;
+    margin-left: 2rem;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__listItem {
+    width: 100%;
+  }
+
+  & .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.3rem 1.5rem;
     white-space: nowrap;
     width: 100%;
-    font-size: 1.4rem;
     color: inherit;
-    display: block;
-    padding: 1.3rem 2rem;
     position: relative;
     z-index: 2;
     border-radius: 0.5rem;
+
     &:global(.active) {
       background-color: $color-primary;
     }
+
+    &__icon {
+      font-size: 2.5rem;
+      min-width: 2.5rem;
+      vertical-align: middle;
+    }
+
+    &__text {
+      text-transform: capitalize;
+      display: none;
+      height: 100%;
+      font-size: 1.9rem;
+      font-weight: 300;
+      line-height: 1;
+      position: relative;
+      top: 0.19rem;
+
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -40,19 +86,16 @@
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
         background-color 0.1s, -webkit-transform 0.2s;
     }
+
+    &:focus-visible {
+      color: $color-primary;
+    }
+
     &:hover::before {
       right: 0%;
       transform: scaleY(1);
       width: 100%;
     }
-  }
-  &__icon {
-    font-size: 2rem;
-    margin-right: 2rem;
-    vertical-align: middle;
-  }
-  &__text {
-    vertical-align: middle;
   }
 
   &__copyright span {

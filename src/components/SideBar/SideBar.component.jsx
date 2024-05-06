@@ -8,27 +8,27 @@ const SideBar = () => {
     <nav className={styles.sideNav}>
       <ul className={styles.sideNav__list}>
         <li className={styles.sideNav__listItem}>
-          <NavLink to="/hotel" className={styles.sideNav__link}>
-            <MdHomeFilled className={styles.sideNav__icon} />
-            <span className={styles.sideNav__text}>HOTEL</span>
+          <NavLink to="/hotel" className={styles.link}>
+            <MdHomeFilled className={styles.link__icon} />
+            <span className={styles.link__text}>hotel</span>
           </NavLink>
         </li>
         <li className={styles.sideNav__listItem}>
-          <NavLink to="/flight" className={styles.sideNav__link}>
-            <MdFlight className={styles.sideNav__icon} />
-            <span className={styles.sideNav__text}>FLIGHT</span>
+          <NavLink to="/flight" className={styles.link}>
+            <MdFlight className={styles.link__icon} />
+            <span className={styles.link__text}>flight</span>
           </NavLink>
         </li>
         <li className={styles.sideNav__listItem}>
-          <NavLink to="/car" className={styles.sideNav__link}>
-            <MdDirectionsCar className={styles.sideNav__icon} />
-            <span className={styles.sideNav__text}> CAR RENTAL</span>
+          <NavLink to="/car" className={styles.link}>
+            <MdDirectionsCar className={styles.link__icon} />
+            <span className={styles.link__text}>car rental</span>
           </NavLink>
         </li>
         <li className={styles.sideNav__listItem}>
-          <NavLink to="/tours" className={styles.sideNav__link}>
-            <FaMapSigns className={styles.sideNav__icon} />
-            <span className={styles.sideNav__text}>TOURS</span>
+          <NavLink to="/tours" className={styles.link}>
+            <FaMapSigns className={styles.link__icon} />
+            <span className={styles.link__text}>tours</span>
           </NavLink>
         </li>
       </ul>
