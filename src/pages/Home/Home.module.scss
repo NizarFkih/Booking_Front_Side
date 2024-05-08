@@ -12,11 +12,32 @@
     align-items: center;
     overflow: hidden;
 
+    @media only screen and (max-width: 56.25rem) {
+        background-image: url(../../assets/image.png);
+        background-position: 10%;
+
+    }
+
     &__mainContent {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 2rem;
+
+        @media only screen and (max-width: 56.25rem) {
+            background-color: white;
+            width: 50%;
+            height: 25%;
+            border-radius: 1.5rem;
+            justify-content: space-around;
+
+        }
+
+        @media only screen and (max-width: 52.5rem) {
+            height: fit-content;
+            padding-block: 4rem;
+            width: 65%;
+        }
 
         & .text {
             &__primary {
@@ -63,8 +84,6 @@
                 &___register {
                     background-color: $color-grey-light-3;
                     color: $color-grey-dark-2;
-
-
                 }
 
                 &___login {
@@ -88,6 +107,10 @@
         & .img {
             max-width: 100%;
             height: auto;
+        }
+
+        @media only screen and (max-width: 56.25rem) {
+            display: none;
         }
     }
 }

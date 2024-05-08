@@ -4,6 +4,12 @@
   box-sizing: inherit;
   scrollbar-width: thin;
 }
+
+$bp-large: 58.75rem; //940px
+$bp-medium: 48.125rem; //770px
+$bp-small: 37.5rem; //600px
+$bp-xsmall: 31.25rem; //500px
+
 body {
   box-sizing: border-box;
   color: #777;
@@ -11,6 +17,32 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+
+::-webkit-scrollbar-thumb {
+  background: #eb2f64;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  color: transparent;
+  background-color: transparent;
+}
+
 html {
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+
+  scrollbar-color: #eb2f64 transparent;
+  scrollbar-arrow-color: transparent;
 }

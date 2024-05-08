@@ -11,18 +11,29 @@
   align-items: center;
   transition: 0.2s;
 
+  @media only screen and (max-width:48.125rem) {
+    flex: 0 0 6.5%;
+  }
+
   &:hover {
     flex: 0 0 18%;
     transition: 0.5s;
+
+    @media only screen and (max-width:48.125rem) {
+      flex: 0 0 6.5%;
+    }
   }
 
   &:hover .link {
     justify-content: start;
+
+    @media only screen and (max-width:48.125rem) {
+      justify-content: center;
+    }
   }
 
   &:hover .link .link__text {
     display: block;
-    margin-left: 2rem;
   }
 
   &__list {
@@ -32,10 +43,19 @@
     align-items: center;
     padding: 0;
     margin: 0;
+
+    @media only screen and (max-width:48.125rem) {
+      flex-direction: row;
+      height: 100%;
+    }
   }
 
   &__listItem {
     width: 100%;
+
+    @media only screen and (max-width:48.125rem) {
+      height: 100%;
+    }
   }
 
   & .link {
@@ -50,6 +70,15 @@
     z-index: 2;
     border-radius: 0.5rem;
 
+    @media only screen and (max-width:48.125rem) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      border-radius: 0rem;
+      padding: 0rem 0rem;
+    }
+
     &:global(.active) {
       background-color: $color-primary;
     }
@@ -58,18 +87,28 @@
       font-size: 2.5rem;
       min-width: 2.5rem;
       vertical-align: middle;
+
+      @media only screen and (max-width:48.125rem) {
+        min-height: 2.5rem;
+      }
     }
 
     &__text {
       text-transform: capitalize;
       display: none;
-      height: 100%;
       font-size: 1.9rem;
       font-weight: 300;
       line-height: 1;
       position: relative;
       top: 0.19rem;
+      margin-left: 2rem;
 
+      @media only screen and (max-width:48.125rem) {
+        display: block;
+        margin: 0;
+        padding: 0;
+        top: 0rem;
+      }
     }
 
     &::before {
@@ -85,6 +124,15 @@
       z-index: -1;
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
         background-color 0.1s, -webkit-transform 0.2s;
+
+      @media only screen and (max-width:48.125rem) {
+        border-radius: 0rem;
+        width: 100%;
+        height: 0.3rem;
+        transform: scaleY(0);
+        transition: transform 0.1s, height 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+          background-color 0.1s, -webkit-transform 0.2s;
+      }
     }
 
     &:focus-visible {
@@ -95,6 +143,12 @@
       right: 0%;
       transform: scaleY(1);
       width: 100%;
+
+      @media only screen and (max-width:48.125rem) {
+        height: 100%;
+        top: 0%;
+        transform: scaleY(1);
+      }
     }
   }
 
@@ -104,5 +158,9 @@
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @media only screen and (max-width:48.125rem) {
+      display: none;
+    }
   }
 }

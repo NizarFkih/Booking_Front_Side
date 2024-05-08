@@ -10,7 +10,6 @@ const Home = () => {
             <div className={styles.actions}>
                 <a href="/register" className={`${styles.btn} ${styles.btn___register}`}>register</a>
                 <a href="/login" className={`${styles.btn} ${styles.btn___login}`}>login</a></div>
-
         </div>
         <div className={styles.container__image}>
             <img className={styles.img} src={image} alt="" />

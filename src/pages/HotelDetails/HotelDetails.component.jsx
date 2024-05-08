@@ -65,7 +65,7 @@ const HotelDetails = () => {
         <div className={styles.sideSection}>
           <div
             className={styles.sideSection__feedbacks}
-            style={{ overflow: showMore ? "scroll" : "hidden" }}
+            style={{ overflowY: showMore ? "scroll" : "hidden" }}
           >
             {data.feedbacks.map((item, index) => (
               <Feedback key={index} data={item} />
